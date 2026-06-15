@@ -3,20 +3,20 @@
 class CommitWhisper < Formula
   desc "Deterministic git history analysis with a grounded, BYOK AI narrative"
   homepage "https://github.com/georgiosnikitas/commit-whisper"
-  version "1.0.1"
+  version "1.0.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.1/commit-whisper-macos-arm64"
-      sha256 "67aef573b0e8927259f91965c805a3feca44333e403cd945e13f0c8e023d8aaa"
+      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.3/commit-whisper-macos-arm64"
+      sha256 "a2d4463420f0383128629e5d18d6af47aef6107a67a252d924f39101faf063d3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.1/commit-whisper-linux-x64"
-      sha256 "322d21603a3e1c67996bf63121539e5a73d47842ea94f33c33b61ab299435465"
+      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.3/commit-whisper-linux-x64"
+      sha256 "b356c5f47b7ed6897d574a86eb50682cb9dc68de078162236d5f91b68a7de2f2"
     end
   end
 
