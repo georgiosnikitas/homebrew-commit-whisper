@@ -3,26 +3,26 @@
 class CommitWhisper < Formula
   desc "Deterministic git history analysis with a grounded, BYOK AI narrative"
   homepage "https://github.com/georgiosnikitas/commit-whisper"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.0/commit-sage-macos-arm64"
-      sha256 "9e67e31fa698d717f431471c153f0ac0e83e0cb109ff99497b69183666bdcc1c"
+      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.1/commit-whisper-macos-arm64"
+      sha256 "67aef573b0e8927259f91965c805a3feca44333e403cd945e13f0c8e023d8aaa"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.0/commit-sage-linux-x64"
-      sha256 "c7d68acd65b4532f42c2c76a1e52f945705d9786f9fbe94e95e27a681ca9c841"
+      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.1/commit-whisper-linux-x64"
+      sha256 "322d21603a3e1c67996bf63121539e5a73d47842ea94f33c33b61ab299435465"
     end
   end
 
   def install
-    # The v1.0.0 release asset is a single raw binary (named per platform); install it as `commit-whisper`.
-    bin.install Dir["commit-sage-*"].first => "commit-whisper"
+    # The release asset is a single raw binary (named per platform); install it as `commit-whisper`.
+    bin.install Dir["commit-whisper-*"].first => "commit-whisper"
   end
 
   test do
