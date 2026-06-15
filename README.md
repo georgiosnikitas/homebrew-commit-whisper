@@ -1,19 +1,19 @@
-# homebrew-commit-sage
+# homebrew-commit-whisper
 
-Homebrew tap for [commit-sage](https://github.com/georgiosnikitas/commit-sage) — deterministic git
+Homebrew tap for [commit-whisper](https://github.com/georgiosnikitas/commit-whisper) — deterministic git
 history analysis with a grounded, bring-your-own-key AI narrative, terminal-native.
 
 ## Install
 
 ```bash
-brew tap georgiosnikitas/commit-sage
-brew install commit-sage
+brew tap georgiosnikitas/commit-whisper
+brew install commit-whisper
 ```
 
 Then run it anywhere:
 
 ```bash
-commit-sage .
+commit-whisper .
 ```
 
 ## Supported platforms
@@ -25,15 +25,15 @@ binaries from the tagged GitHub release (no Node.js runtime required):
 - Linux (x64)
 
 On other platforms (Intel macOS, ARM Linux, Windows), install from npm instead —
-`npm install -g commitsage` — or download a binary from the
-[releases](https://github.com/georgiosnikitas/commit-sage/releases).
+`npm install -g commitwhisper` — or download a binary from the
+[releases](https://github.com/georgiosnikitas/commit-whisper/releases).
 
 ## Updating the formula
 
-Each release pins the binary URLs and their SHA256 checksums. When a new `vX.Y.Z` of commit-sage is
+Each release pins the binary URLs and their SHA256 checksums. When a new `vX.Y.Z` of commit-whisper is
 published, bump `version`, the `url`s, and the `sha256`s in
-[`Formula/commit-sage.rb`](Formula/commit-sage.rb).
+[`Formula/commit-whisper.rb`](Formula/commit-whisper.rb).
 
 ## License
 
-[MIT](https://github.com/georgiosnikitas/commit-sage/blob/main/LICENSE)
+[MIT](https://github.com/georgiosnikitas/commit-whisper/blob/main/LICENSE)
