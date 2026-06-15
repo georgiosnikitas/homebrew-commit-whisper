@@ -1,28 +1,17 @@
-# Homebrew formula for commit-whisper — installs the prebuilt Node SEA single-file
-# binary from the tagged GitHub release (no Node.js runtime required).
+# Homebrew formula for commit-whisper — installs the published npm tarball and
+# runs on Homebrew's Node.js. Regenerated on every release by CI.
 class CommitWhisper < Formula
   desc "Deterministic git history analysis with a grounded, BYOK AI narrative"
   homepage "https://github.com/georgiosnikitas/commit-whisper"
-  version "1.0.3"
+  url "https://registry.npmjs.org/commit-whisper/-/commit-whisper-1.0.3.tgz"
+  sha256 "7f626d45e4772c571729f14419f9e5a463a17951d7a86bf4f3fbcf2b073fd682"
   license "MIT"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.3/commit-whisper-macos-arm64"
-      sha256 "a2d4463420f0383128629e5d18d6af47aef6107a67a252d924f39101faf063d3"
-    end
-  end
-
-  on_linux do
-    on_intel do
-      url "https://github.com/georgiosnikitas/commit-whisper/releases/download/v1.0.3/commit-whisper-linux-x64"
-      sha256 "b356c5f47b7ed6897d574a86eb50682cb9dc68de078162236d5f91b68a7de2f2"
-    end
-  end
+  depends_on "node"
 
   def install
-    # The release asset is a single raw binary (named per platform); install it as `commit-whisper`.
-    bin.install Dir["commit-whisper-*"].first => "commit-whisper"
+    system "npm", "install", *std_npm_args
+    bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
