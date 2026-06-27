@@ -3,8 +3,8 @@
 class CommitWhisper < Formula
   desc "Deterministic git history analysis with a grounded, BYOK AI narrative"
   homepage "https://github.com/georgiosnikitas/commit-whisper"
-  url "https://registry.npmjs.org/commit-whisper/-/commit-whisper-1.1.4.tgz"
-  sha256 "95a56083ac5c46d946e9d5d03f517132ed075a4ed5ba881808e72daaf1f60dbd"
+  url "https://registry.npmjs.org/commit-whisper/-/commit-whisper-1.1.5.tgz"
+  sha256 "1eda51ec56898c5d09cc0278ac1818e22ace45472be04d8c8d7717d3b8e8233d"
   license "MIT"
 
   depends_on "node"
